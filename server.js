@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const app = express()
 const food = require('./models/food')
+const foodSeed = require("./models/foodSeed")
 
 // .env
 require("dotenv").config()

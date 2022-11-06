@@ -1,4 +1,4 @@
-module.exports = [
+const foodSeed = [
 {
   name: 'Bariis iyo Suqaar',
   price: 13.99,
@@ -54,3 +54,5 @@ module.exports = [
       ]
    },
 ]
+
+module.exports = foodSeed
