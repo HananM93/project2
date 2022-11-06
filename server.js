@@ -14,6 +14,9 @@ const PORT = process.env.PORT
 // STATIC
 app.use(express.static('public'));
 
+// Database Connection
+mongoose.connect(process.env.DATABASE_URL)
+
 // Database Connection Error/Success
 // Define callback functions for various events
 const db = mongoose.connection
@@ -27,25 +30,54 @@ app.use(express.urlencoded({ extended: true }))
 // captures requests for put and delete and converts them from a post 
 app.use(methodOverride("_method"))
 
-//ROOT ROUTE
-app.get('/', (req,res) => {
-    res.send('welcome');
-})
 
 // I N D U C E S 
 // INDEX | NEW | DELETE | UPDATE | CREATE | EDIT | SHOW 
 
+// Seed 
+
+app.get("foods/seed", (req, res) => {
+    food.deleteMany({}, (error, allFoods) => {})
+    food.create(foodSeed, (error, data) => {
+      res.redirect("/foods")
+    })
+  })
+
 // INDEX
-app.get('/restaurant', (req,res) => {
-    res.render('index.ejs', {
-        foods:food
+app.get("/foods", (req, res) => {
+    food.find({}, (error, allFoods) => {
+      res.render("index.ejs", {
+        foods: allFoods,
+      })
+    })
+  })
+
+// New 
+app.get("/foods/new", (req, res) => {
+    res.render("new.ejs")
+  })  
+
+// DELETE 
+app.delete("/foods/:id", (req, res) => {
+    food.findByIdAndRemove(req.params.id, (err, deletedFood) => {
+        res.redirect("/foods")
     })
 })
 
+// Create
+app.post("/foods", (req, res) => {
+    res.send("received")
+  })
 
-
-
+// Show
+app.get("/foods:id", (req, res) => {
+    food.findById(req.params.id, (err, foundFood) => {
+      res.render("show.ejs", {
+        food: foundFood,
+      })
+    })
+  })
 
 
 // Listener 
-app.listen(PORT, () => console.log(`server is listning on port: ${PORT}`))
+app.listen(PORT, () => console.log(`server is listening on port: ${PORT}`))
