@@ -1,18 +1,18 @@
 // Dependencies
-const express = require('express')
-const mongoose = require('mongoose')
-const methodOverride = require('method-override')
+const express = require("express")
+const mongoose = require("mongoose")
+const methodOverride = require("method-override")
 const app = express()
-const food = require('./models/food')
-const foodSeed = require("./models/foodSeed")
 
-// .env
+// Routes / Controllers 
+// import our book model to use
+const foodsController = require("./controllers/foods")
+
+// Pulls enviroment vars into server js from .en
 require("dotenv").config()
 
+// 1ST PORT AND 2ND PORT NOT THE SAME 
 const PORT = process.env.PORT
-
-// STATIC
-app.use(express.static('public'));
 
 // Database Connection
 mongoose.connect(process.env.DATABASE_URL)
@@ -30,7 +30,10 @@ app.use(express.urlencoded({ extended: true }))
 // captures requests for put and delete and converts them from a post 
 app.use(methodOverride("_method"))
 
+// use the books controllers for books routes
+app.use("/foods", foodsController)
 
-
+// include public static files
+app.use(express.static('public'))
 // Listener 
-app.listen(PORT, () => console.log(`server is listening on port: ${PORT}`))
+app.listen(PORT, () => console.log(`server is listning on port: ${PORT}`))
