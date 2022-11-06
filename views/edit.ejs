@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>new</title>
+    <title>Edit</title>
 </head>
 <body>
-    <h1>Add to the Menu</h1>
-    <form action="/foods" method="POST">
-        Name: <input type="text" placeholder="Name"/><br />
-        Description: <input type="text" placeholder="Description"/><br />
-        Image: <input type="text" placeholder="Image"/><br />
-        Price: <input type="text" placeholder="Price"/><br />
-        <input type="submit" name="" value="Add " />
-    </form>
-</body>
-</html>
-
-
-
-
+    <div>
+        <form action="/foods/<%=book._id%>?_method=PUT" method="POST">
+            <div>
+                <h3>Item</h3>
+                <div>
+                    <div>Name</div>
+                    <input type="text" name="name" value="<%=food.name%>"/>
+                </div>
+                <div>
+                    <div>Description</div>
+                    <input type="text" name="type" value="<%=food.description%>"/>
+                </div>
+                <div>
+                    <div>Image</div>
+                    <input type="text" name="img" value="<%=food.img%>"/>
+                </div>
+                <div>Price </div>
+                    <input type="text" name="name" value="<%=food.price%>"/>
+                </div>
+        <input type="submit" value="Submit Changes"/>
+      </form>
+      </div>
+    </body>
+  </html>
 
