@@ -7,28 +7,30 @@
     <title>Edit</title>
 </head>
 <body>
+    <h3>Item</h3>
+    <form action="/foods/<%=food._id%>?_method=PUT" method="POST">
     <div>
-        <form action="/foods/<%=book._id%>?_method=PUT" method="POST">
             <div>
-                <h3>Item</h3>
                 <div>
                     <div>Name</div>
                     <input type="text" name="name" value="<%=food.name%>"/>
                 </div>
                 <div>
                     <div>Description</div>
-                    <input type="text" name="type" value="<%=food.description%>"/>
+                    <input type="text" name="description" value="<%=food.description%>"/>
                 </div>
                 <div>
                     <div>Image</div>
                     <input type="text" name="img" value="<%=food.img%>"/>
                 </div>
                 <div>Price </div>
-                    <input type="text" name="name" value="<%=food.price%>"/>
+                    <input type="text" name="price" value="<%=food.price%>"/>
                 </div>
-        <input type="submit" value="Submit Changes"/>
-      </form>
+                <div>
+                    <input type="submit" action="/`foods" value="Update item"/>
+                </div>
       </div>
+    </form>
     </body>
   </html>
 
