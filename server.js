@@ -37,9 +37,9 @@ app.get("/foods/seed", (req, res) => {
   })
 })
 
-//Root Route
+//Root Route / Home Page
 app.get("/", (req, res) => {
-  res.send("home")
+  res.send("/foods")
 })
 
 // Index
