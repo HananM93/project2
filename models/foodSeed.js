@@ -6,7 +6,7 @@ module.exports = [
       " Rice: basmati rice cooked with onions, garlic, and spices",
       ],
       img: "https://i.imgur.com/pETLt4T.png",
-      price: 13.99,
+      
   },
   {
     name: 'Baasto iyo Suugo',
@@ -15,7 +15,6 @@ module.exports = [
       " Pasta: thin spaghetti made with tomato sauce, spices, and cheese",
       ],
     img: "https://i.imgur.com/sTMHl7Z.png",
-    price: 12.99,
     },
   {
     name: 'Chicken Suqaar & Malawax',
@@ -24,7 +23,6 @@ module.exports = [
       " Malawax: thin bread similar to pancakes & crepes",
       ],
     img: "https://i.imgur.com/yA2PpFH.png",  
-    price: 10.99,
     },
   {
     name: 'Bariis iyo Chicken Suqaar',
@@ -32,8 +30,7 @@ module.exports = [
       "Chicken Suqaar: cubes of chicken breast cooked with vegetables and spices",
       " Rice: basmati rice cooked with onions, garlic, and spices",
       ],
-    img: "https://i.imgur.com/rVfOIKi.png",
-    price: 11.99,
+    img: "https://i.imgur.com/UHTuNzy.png",
    },
   {
     name: 'Canjeero iyo Beer',
@@ -42,7 +39,6 @@ module.exports = [
       " Canjeero: thin bread similar to pancakes & crepes",
       ],
     img: "https://i.imgur.com/6iVCdfk.png",  
-    price: 15.99,
    },
   {
     name: 'Bariis iyo Hilib ',
@@ -51,7 +47,6 @@ module.exports = [
         " Rice: basmati rice cooked with onions, garlic, and spices",
       ],
     img: "https://i.imgur.com/oS8igt0.png",    
-    price: 14.99,
      },
   ]
   
