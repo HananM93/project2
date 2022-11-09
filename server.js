@@ -17,8 +17,13 @@ db.on("error", (err) => console.log(err.message + " is mongo not running?"))
 db.on("connected", () => console.log("mongo connected"))
 db.on("disconnected", () => console.log("mongo disconnected"))
 
+
+// include public static files
+app.use(express.static('public'))
+
 // Middleware
 // Body parser middleware: give us access to req.body
+app.use(methodOverride("_method"))
 app.use(express.urlencoded({ extended: true }))
 
 // I N D U C E S 
@@ -85,7 +90,6 @@ app.get("/foods/:id/edit", (req, res) => {
 // Show 
 app.get("/foods/:id", (req, res) => {
     Food.findById(req.params.id, (err, foundFood) => {
-      // console.log(error)
       res.render("show.ejs", {
         food: foundFood,
       })
