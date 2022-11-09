@@ -5,7 +5,7 @@ module.exports = [
       "Beef Suqaar: cubes of beef cooked with vegetables and spices",
       " Rice: basmati rice cooked with onions, garlic, and spices",
       ],
-      img: "https://i.imgur.com/Q9xtI8k.jpg",
+      img: "https://i.imgur.com/pETLt4T.png",
       price: 13.99,
   },
   {
@@ -14,7 +14,7 @@ module.exports = [
       "Beef Suqaar: cubes of beef cooked with vegetables and spices",
       " Pasta: thin spaghetti made with tomato sauce, spices, and cheese",
       ],
-    img: "https://i.imgur.com/gy9NjPw.jpg",
+    img: "https://i.imgur.com/sTMHl7Z.png",
     price: 12.99,
     },
   {
@@ -23,7 +23,7 @@ module.exports = [
       "Chicken Suqaar: cubes of chicken breast cooked with vegetables and spices",
       " Malawax: thin bread similar to pancakes & crepes",
       ],
-    img: "https://i.imgur.com/rfnopsT.jpg",  
+    img: "https://i.imgur.com/yA2PpFH.png",  
     price: 10.99,
     },
   {
@@ -41,16 +41,16 @@ module.exports = [
       "Beer: thin strips of goat liver cooked with vegetables and spices",
       " Canjeero: thin bread similar to pancakes & crepes",
       ],
-    img: "https://i.imgur.com/2NsYGIQ.jpg",  
+    img: "https://i.imgur.com/6iVCdfk.png",  
     price: 15.99,
    },
   {
-    name: 'Hilib iyo Bariis',
+    name: 'Bariis iyo Hilib ',
     description: [
         "Goat: medium cut pieces of goat boiled to tender and sautéed with spices & vegetables",
         " Rice: basmati rice cooked with onions, garlic, and spices",
       ],
-    img: "https://i.imgur.com/62ncvuk.png",    
+    img: "https://i.imgur.com/oS8igt0.png",    
     price: 14.99,
      },
   ]

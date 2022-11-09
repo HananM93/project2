@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Somali Dishes</title>
 </head>
 <body>
-    <nav>
-        <a href="foods/new">Add a item </a>
+     
+ <nav class="navbar navbar-expand-md">
+ 
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="/foods/new">Add a Dish</a>
+          </li>
+      </ul>
+  </div>
+</nav>
       </nav>
-      <!-- <img class= "cover" src="/img/cover.png" alt="home page cover"> -->
+    <div>
       <h1>index page</h1>
   
-      <div>
+      <div class="parent">
         <% foods.forEach(food => { %>
         <div>
           <p><%=food.name %></p>
@@ -26,9 +41,9 @@
           </div>
           <form action="/foods/<%= food.id %>?_method=DELETE" method="POST">
               <input type="submit" value="DELETE" />
-              <a href="/foods/<%=food._id %>/edit">Edit</a>
+               <a href="/foods/<%=food._id %>/edit">Edit</a> 
             </form>
-      
+        
         </div>
         <% }) %>
       </div>

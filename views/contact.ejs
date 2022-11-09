@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')%>
+</head>
+<body>
+    <title>Contact></title>
+    <div>
+        <p>if you have any thoughts or questions you might have about the Somali Dishes!</p>
+        <form action="/contact" method="POST">
+            <label for="name">Name: </label><br />
+            <input type="text" name="name"><br />
+            <label for="email">Email Address: </label><br />
+            <input type="email" name="email"><br />
+            <label for="message">Message: </label><br />
+            <textarea name="message" cols=50 rows=15 placeholder="Say Hi!"></textarea><br />
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+</body>
+</html>
