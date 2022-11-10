@@ -27,7 +27,7 @@ const foodsController = require("./controllers/foods")
 require("dotenv").config()
 
 // 1ST PORT AND 2ND PORT NOT THE SAME 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT; "3000"
 
 // Database Connection
 mongoose.connect(process.env.DATABASE_URL)
