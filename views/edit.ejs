@@ -9,29 +9,25 @@
 </head>
 <body>
      <title>Edit</title>
-    <h3>Item</h3>
-    <form action="/foods/<%=food._id%>?_method=PUT" method="POST">
+    <form action="/foods/<%=food._id%>?_method=PUT" method="POST"></form>
     <div>
-            <div>
-                <div>
-                    <div>Name</div>
-                    <input type="text" name="name" value="<%=food.name%>"/>
-                </div>
-                <div>
-                    <div>Description</div>
-                    <input type="text" name="description" value="<%=food.description%>"/>
-                </div>
-                <div>
-                    <div>Image</div>
-                    <input type="text" name="img" value="<%=food.img%>"/>
-                </div>
-                <div>Price </div>
-                    <input type="text" name="price" value="<%=food.price%>"/>
-                </div>
-                <div>
-                    <input type="submit" action="/`foods" value="Update item"/>
-                </div>
+  
+        <h3 class="feature-title">Dish</h3>
+        <div class="form-group">
+            <input type="text" class="form-control" value="<%=food.name%>">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" value="<%=food.description%>">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" value="<%=food.img%>">
+        </div>
+        <input type="submit" class="btn btn-secondary btn-block"  action="/`foods" value="Update Dish" >
+
+  
       </div>
     </form>
     </body>
   </html>
+
+  
