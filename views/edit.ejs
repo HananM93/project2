@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-     <title>Edit</title>
-    <form action="/foods/<%=food._id%>?_method=PUT" method="POST"></form>
-    <div>
-  
-        <h3 class="feature-title">Dish</h3>
-        <div class="form-group">
-            <input type="text" class="form-control" value="<%=food.name%>">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" value="<%=food.description%>">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" value="<%=food.img%>">
-        </div>
-        <input type="submit" class="btn btn-secondary btn-block"  action="/`foods" value="Update Dish" >
+    <title>Edit</title>
+  <form action="/foods/<%=food._id%>?_method=PUT" method="POST">
+  <div>
+
+      <h3 class="feature-title">Dish</h3>
+      <div class="form-group">
+        <input type="text" name="name" value="<%=food.name%>"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="description" value="<%=food.description%>"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="img" value="<%=food.img%>"/>
+      </div>
+      <div>
+        <input type="submit" action="/`foods" value="Update item"/>
+    </div>
 
   
       </div>
