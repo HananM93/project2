@@ -58,7 +58,7 @@ body {
 
 
 
-.delete, .edit { 
+.delete, .edit, .back-btn { 
     text-decoration: none;
  }
 
@@ -83,7 +83,7 @@ body {
 
 
 
-input, .edit {
+input, .edit, #new-img{
     background-color: transparent;
     border: 0px solid;
     align-items: center;
@@ -97,9 +97,10 @@ img {
 }
 .fdescription {
     padding: 0;
+    color: rgba(29, 103, 25, 0.618);
 }
 
-h5 {
+h5, .food-name{
     color: green;
     font-weight: bold;
 }
