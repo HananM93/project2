@@ -26,7 +26,7 @@ body {
     margin-right: 1em !important;
 }
 .nav-link:hover {
-    color: #000;
+    color: rgb(2, 61, 2);
 }
 .navbar-collapse {
     justify-content: flex-end;
